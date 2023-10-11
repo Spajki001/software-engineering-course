@@ -1,5 +1,7 @@
 # Tutor
 
+# Author: Mateo Spajić
+
 - **git clone PATH_TO_REPO**
     
     Kloniranje repozitorija sa linkom istoga.
