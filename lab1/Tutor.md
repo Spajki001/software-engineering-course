@@ -32,4 +32,4 @@
 
 - **git pull origin master**
 
-    Povlačenje novih remote commitova na lokalni repozitorij. -||-
+    Povlačenje novih remote commitova na lokalni repozitorij. Origin je ime remotea, a master je ime brancha na remoteu
