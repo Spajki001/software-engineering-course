@@ -1,7 +1,7 @@
-# Software Engineering Labs 2022/2023
+# Software Engineering Labs 2023/2024
 ## Stručni studij računarstvo
 
-# Author: WRITE YOUR FULL NAME HERE
+# Author: Mateo Spajić
 
 # Setup
 
@@ -38,9 +38,9 @@ or delete the repo directory using a File Explorer
 ### Pulling the changes from this repo to your copy of the repo:
 
 ``` 
-git remote add upstream https://gitlab.com/levara/se-labs-2223-sr
-git fetch upstream main
-git merge upstream/main
+git remote add upstream https://gitlab.com/levara/se-labs-2324-sr
+git fetch upstream master
+git merge upstream/master
 ```
 
 The first line will add the original repo as additional remote repository to your project. 
@@ -64,7 +64,7 @@ file ( `ctrl + x` -> `y` to save changes -> `enter` to confirm the suggested fil
 To push the changes to your gitlab repository run:
 
 ```
-git push origin main
+git push origin master
 ```
 
 After running this command all the changes imported from the original repository to 
