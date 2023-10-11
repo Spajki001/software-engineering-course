@@ -29,3 +29,7 @@
 - **git push origin master**
     
     Slanje commitova na remote server. Origin je ime remotea, a master je ime brancha na remoteu
+
+- **git pull origin master**
+
+    Povlačenje novih remote commitova na lokalni repozitorij. -||-
