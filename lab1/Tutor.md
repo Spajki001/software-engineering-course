@@ -1,6 +1,6 @@
-# Tutor
+# **Tutor**
 
-# Author: Mateo Spajić
+## Author: Mateo Spajić
 
 - **git clone PATH_TO_REPO**
     
