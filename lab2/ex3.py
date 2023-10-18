@@ -13,10 +13,8 @@ for line in txt:
     employee['title'] = split_line[1]
     employee['age'] = split_line[2]
     employee['office'] = split_line[3]
-    if (split_line[0] == "Employee"):
-        continue
-    else:
-        employees.append(employee)
+    employees.append(employee)
 
-with open('./lab2/ex4-employees.json', 'w', encoding='utf-8') as f:
-    json.dump(employees, f)
+for employee in employees:
+    if employee['employee'] != 'Employee':
+        print(employee)
