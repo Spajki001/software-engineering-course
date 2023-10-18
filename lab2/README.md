@@ -22,31 +22,29 @@
   - using the formatted string literals method (7.1.1)
   - using the String `format()` method (7.1.2)
   - using the old string formatting method (7.1.4)
-- Save your solution as ` ex1.py ` and commit
-
+- Save your solution as `ex1.py` and commit
 
 ### Exercise 2
 
 - Read section 7.2 from the tutorial.
-- Read string methods documentation: 
+- Read string methods documentation:
   - https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str
   - https://docs.python.org/3/library/stdtypes.html#string-methods
-  - Give special focus to ` split() ` and ` strip() ` methods
+  - Give special focus to `split()` and `strip()` methods
 - Write a simple program which loads the data from the `.csv` file (hint
   about [csv file format](https://www.howtogeek.com/348960/what-is-a-csv-file-and-how-do-i-open-it/) and writes it to different files
   - Read data from file `ex2-text.csv`
-  - Parse it (split lines on ` , ` chars and store in variables)
+  - Parse it (split lines on `,` chars and store in variables)
   - Write data to files:
     - `ex2-employees.txt` in format `employee,job title`
     - `ex2-locations.txt` in format `employee,office`
-- Save your solution as ` ex2.py ` and commit, along with created `.txt`
+- Save your solution as `ex2.py` and commit, along with created `.txt`
   files, all in the same commit.
-
 
 ### Exercise 3
 
 - Read section 5 of the tutorial, with special focus on 5.5.
-  (dictionaries), and 5.6 (looping techniques for dictionaries). 
+  (dictionaries), and 5.6 (looping techniques for dictionaries).
 - Dictionaries are essentially `key: value` pairs, as we can see in the
   first code example in section 5.5.:
 
@@ -77,6 +75,7 @@ True
 >>> 'jack' not in tel
 False
 ```
+
 <!--- `--->
 
 - Write a simple program that will:
@@ -91,15 +90,16 @@ False
 >>> print(employees)
 [{'employee': 'John Campbell', 'title': 'Software Architect', 'age': 83, 'office': '1-41'}, {'employee': 'Richel Omaba', 'title': 'Lawyer', 'age': 119, 'office': '0-33'}, ...]
 ```
+
 <!--- `--->
 
-- Save your solution as ` ex3.py ` and commit.
+- Save your solution as `ex3.py` and commit.
 
 ### Exercise 4
 
 - Read section 7.2.2 (JSON)
-- Modify the program ` ex3.py ` from the previous exercise. The modified
-  program has to load and parse data to a dictionary, same as in ` ex3.py `.
+- Modify the program `ex3.py` from the previous exercise. The modified
+  program has to load and parse data to a dictionary, same as in `ex3.py`.
   However, the modified program now has to save that data to disk in `json`
   format:
 
@@ -107,10 +107,11 @@ False
 with open('ex4-employees.json', 'w', encoding='utf-8') as f:
     json.dump(employees, f)
 ```
+
 <!--- `--->
 
-- Save your changes to ` ex3.py ` and commit both the
-  modified ` ex3.py ` and the created `.json` file.
+- Save your changes to `ex3.py` and commit both the
+  modified `ex3.py` and the created `.json` file.
 - Hint: Reread section 7.2 to remind yourself how to open a file with `with`
   keyword
 
@@ -138,16 +139,16 @@ class Employee:
         return f"{self.name} ({self.age}), {self.title} @ {self.office}"
 ```
 
-- Load employees from `ex4-employees.json` file 
+- Load employees from `ex4-employees.json` file
 
 ```python
 with open("ex4-employees.json", "r", encoding="utf-8") as f:
     employees = json.load(f)
 ```
+
 <!--- `--->
 
-
-- Create a list `employees_list` 
+- Create a list `employees_list`
 - For each employee in `employees`, create an object of a type `Employee` and
   append it to the `employees_list`
 - Print all the employees using the following code:
@@ -164,10 +165,10 @@ John Campbell (83), Software Architect @ 1-41
 Richel Omaba (119), Lawyer @ 0-33
 ... and so on ...
 ```
+
 <!--- `--->
 
 - Save your solution to ` ex5.py` and commit it.
-
 
 ### Exercise 6
 
@@ -269,5 +270,3 @@ if __name__ == "__main__":
 - Implement missing methods in `Company` class
 - Save the file and the new database (`ex6-employees.json`) and commit both
   files.
-
-
