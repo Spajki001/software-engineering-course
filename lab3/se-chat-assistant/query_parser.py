@@ -3,6 +3,11 @@ from joke_handler import JokeHandler
 from fact_handler import FactHandler
 from dice_handler import DiceHandler
 from rps_handler import RockPaperScissorsHandler
+from love_handler import LoveHandler
+from chuck_handler import ChuckHandler
+from movies_handler import MoviesHandler
+from translate_handler import TranslateHandler
+from currency_handler import CurrencyHandler
 
 class QueryNotUnderstoodHandler(QueryHandlerBase):
     def process(self, query):
@@ -34,6 +39,11 @@ class QueryParser:
         DiceHandler,
         JokeHandler,
         RockPaperScissorsHandler,
+        LoveHandler,
+        ChuckHandler,
+        MoviesHandler,
+        TranslateHandler,
+        CurrencyHandler,
     ]
 
     def __init__(self, ui):
