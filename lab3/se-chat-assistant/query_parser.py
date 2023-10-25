@@ -2,6 +2,7 @@ from query_handler_base import QueryHandlerBase
 from joke_handler import JokeHandler
 from fact_handler import FactHandler
 from dice_handler import DiceHandler
+from rps_handler import RockPaperScissorsHandler
 
 class QueryNotUnderstoodHandler(QueryHandlerBase):
     def process(self, query):
@@ -32,6 +33,7 @@ class QueryParser:
         FactHandler,
         DiceHandler,
         JokeHandler,
+        RockPaperScissorsHandler,
     ]
 
     def __init__(self, ui):
