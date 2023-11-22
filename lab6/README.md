@@ -6,13 +6,16 @@
 
 https://realpython.com/python-virtual-environments-a-primer/
 
-Don't forget to add virtual environment files to ` .gitignore `.
+Ne zaboravi dodati environment datoteke u ` .gitignore `.
 
-## Django tutorials
 
-### Follow along
+#  Interaktivna vježba
 
-[Django v4.1 official tutorial](https://docs.djangoproject.com/en/4.2/intro/tutorial01/)
+U lab6 folderu nalazi se `update.sh` skripta. Ova skripta će updateati vaš radni projekt sa zadnjom pushano verzijom na repozitoriju.
 
-Also: [Official Python tutorial](https://docs.python.org/3/tutorial/index.html)
+Pokrećete ju sa:
 
+```bash
+# Pobrinite se da ste u MOJ_REPO/lab6 folderu
+./update.sh
+```
