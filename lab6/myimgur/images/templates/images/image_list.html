@@ -5,7 +5,9 @@
     <div>
         {% for image in images %}
             <div>
-                <p>{{ image.title }}</p>
+                <a href="/images/{{ image.id }}">
+                        <p>{{ image.title }}</p>
+                </a>
                 <img src="{{ image.url }}" alt="" style="width: 300px;">
                 <p>{{ image.desc }}</p>
             </div>

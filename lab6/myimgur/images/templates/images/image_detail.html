@@ -1,0 +1,11 @@
+{% extends 'images/base.html' %}
+
+{% block content %}
+    <h1>{{ image.title }}</h1>
+    <div>
+        <div>
+            <img src="{{ image.url }}" alt="" style="width: 300px;">
+            <p>{{ image.desc }}</p>
+        </div>
+    </div>
+{% endblock content %}
