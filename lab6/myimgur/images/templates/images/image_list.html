@@ -1,5 +1,14 @@
 {% extends 'images/base.html' %}
 
 {% block content %}
-        <p>All pics go here</p>
+    <h1>Pics</h1>
+    <div>
+        {% for image in images %}
+            <div>
+                <p>{{ image.title }}</p>
+                <img src="{{ image.url }}" alt="" style="width: 300px;">
+                <p>{{ image.desc }}</p>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock content %}
