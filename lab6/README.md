@@ -1,6 +1,6 @@
 # Lab 6 - Django
 
-# Copy your `mysite` folder from Lab4 and continue with the tutorials
+# Create your `myimgur` project and do the project
 
 ## Configure python virtual environment 
 
