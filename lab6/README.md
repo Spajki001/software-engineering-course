@@ -1,4 +1,4 @@
-# Lab 5 - Django
+# Lab 6 - Django
 
 # Copy your `mysite` folder from Lab4 and continue with the tutorials
 
