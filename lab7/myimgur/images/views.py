@@ -22,8 +22,10 @@ def image_list(request):
 
 def image_detail(request, image_id):
     image = Image.objects.get(id=image_id)
+    comments = image.comment_set.all()
     context = {
         'image': image,
+        'comments': comments,
     }
     return render(request, 'images/image_detail.html', context)
 
