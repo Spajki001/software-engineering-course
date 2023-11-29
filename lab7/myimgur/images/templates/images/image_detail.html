@@ -9,6 +9,15 @@
         </div>
     </div>
     <div>
+        <h2>Add comment</h2>
+        <form action="{% url 'images:create_comment' image.id %}" method="post">
+            {% csrf_token %}
+            <label for="">Author</label><br>
+            <input type="text" name="author"><br>
+            <label for="">Comment</label><br>
+            <textarea name="content" cols="30" rows="4"></textarea><br>
+            <input type="submit" value="Submit comment">
+        </form>
         <h2>Comments</h2>
         {% for comment in comments %}
         <hr>
