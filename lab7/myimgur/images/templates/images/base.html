@@ -8,8 +8,8 @@
     <body>
         <div>
             <a href="/">Home</a>
-            <a href="/images/">Pics</a>
-            <a href="/images/new">Add pics</a>
+            <a href="{% url 'images:list' %}">Pics</a>
+            <a href="{% url 'images:create' %}">Add pics</a>
         </div>
         <h1>MyImgur</h1>
         {% block content %}

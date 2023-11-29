@@ -5,7 +5,7 @@
     <div>
         {% for image in images %}
             <div>
-                <a href="/images/{{ image.id }}">
+                <a href="{% url 'images:detail' image.id %}">
                         <p>{{ image.title }}</p>
                 </a>
                 <img src="{{ image.url }}" alt="" style="width: 300px;">

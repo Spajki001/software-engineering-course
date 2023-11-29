@@ -3,8 +3,9 @@ from .views import image_list
 from .views import image_detail
 from .views import create_image
 
+app_name = 'images'
 urlpatterns = [
-    path('', image_list, name='image_list'),
-    path('<int:image_id>', image_detail, name='image_detail'),
-    path('new/', create_image, name='create_image'),
+    path('', image_list, name='list'),
+    path('<int:image_id>', image_detail, name='detail'),
+    path('new/', create_image, name='create'),
 ]
