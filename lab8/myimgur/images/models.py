@@ -24,3 +24,8 @@ class Comment(models.Model):
     
     def author(self):
         return f"{self.user.username}"
+    
+class Like(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    image = models.ForeignKey(Image, on_delete=models.CASCADE)
+    

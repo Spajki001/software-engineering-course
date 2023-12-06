@@ -23,9 +23,11 @@ def image_list(request):
 def image_detail(request, image_id):
     image = Image.objects.get(id=image_id)
     comments = image.comment_set.all()
+    is_liked = image.like_set.filter(user=request.user).first()
     context = {
         'image': image,
         'comments': comments,
+        'is_liked': is_liked,
     }
     return render(request, 'images/image_detail.html', context)
 
@@ -47,4 +49,14 @@ def create_comment(request, image_id):
             image = get_object_or_404(Image, pk=image_id)
             content = request.POST.get('content', "")
             image.comment_set.create(user=request.user, content=content)
+    return HttpResponseRedirect(reverse('images:detail', args=(image_id,)))
+
+def toggle_like(request, image_id):
+    if request.user.is_authenticated:
+        image = get_object_or_404(Image, pk=image_id)
+        like = image.like_set.filter(user=request.user).first()
+        if like:
+            like.delete()
+        else:
+            image.like_set.create(user=request.user)
     return HttpResponseRedirect(reverse('images:detail', args=(image_id,)))

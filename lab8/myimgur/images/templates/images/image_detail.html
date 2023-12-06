@@ -1,9 +1,16 @@
 {% extends 'images/base.html' %}
 
 {% block content %}
-    <h1>{{ image.title }}</h1>
+    <h1>{{ image.title }}
+        (Likes: {{ image.like_set.count }})
+    </h1>
+    {% if is_liked %}
+    <a href="{% url 'images:toggle_like' image.id %}">Unlike</a>
+    {% else %}
+    <a href="{% url 'images:toggle_like' image.id %}">Like</a>
+    {% endif %}
     <div>
-        <div>
+        <div><br>
             <img src="{{ image.url }}" alt="" style="width: 300px;">
             <p>{{ image.desc }}</p>
         </div>
