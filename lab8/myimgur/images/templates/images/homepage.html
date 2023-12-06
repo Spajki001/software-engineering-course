@@ -1,0 +1,8 @@
+{% extends 'images/base.html' %}
+
+{% block content %}
+    <p>Look at our base with {{ count }} pics.</p>
+    <p>
+        <a href="{% url 'images:list' %}">Look at pics!</a>
+    </p>
+{% endblock content %}
