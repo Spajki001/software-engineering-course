@@ -1,4 +1,4 @@
-# Lab 7 - Django
+# Lab 8 - Django
 
 # Continue your `myimgur` project and do the project
 
