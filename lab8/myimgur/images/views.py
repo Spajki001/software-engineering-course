@@ -42,11 +42,9 @@ def create_image(request: HttpRequest):
     return render(request, 'images/create_image.html', context)
 
 def create_comment(request, image_id):
-    if request.method == 'POST':
-        image = get_object_or_404(Image, pk=image_id)
-        author = request.POST.get('author', "")
-        if author == "":
-            author = "Anonymous"
-        content = request.POST.get('content', "")
-        image.comment_set.create(author=author, content=content)
-    return HttpResponseRedirect(reverse('images:detail', args=(image.id,)))
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            image = get_object_or_404(Image, pk=image_id)
+            content = request.POST.get('content', "")
+            image.comment_set.create(user=request.user, content=content)
+    return HttpResponseRedirect(reverse('images:detail', args=(image_id,)))
