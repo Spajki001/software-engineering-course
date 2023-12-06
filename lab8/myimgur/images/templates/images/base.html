@@ -10,6 +10,18 @@
             <a href="/">Home</a>
             <a href="{% url 'images:list' %}">Pics</a>
             <a href="{% url 'images:create' %}">Add pics</a>
+            <!-- if user is logged in do this -->
+            {% if request.user.is_authenticated %}
+            {{ request.user.username }}
+            <a href="{% url 'logout' %}">Logout</a>
+            <!-- if user is superuser, show admin dashboard -->
+                {% if request.user.is_superuser %}
+                <a href="/admin">Admin dashboard</a>
+                {% endif %}
+            <!-- if user is not logged in do this -->
+            {% else %}
+            <a href="#">Log in</a>
+            {% endif %}
         </div>
         <h1>MyImgur</h1>
         {% block content %}
