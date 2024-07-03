@@ -2,6 +2,8 @@
 
 ## Stručni studij računarstvo
 
+## Everything below in this README is a copy of my professor's README
+
 # Author: Mateo Spajić
 
 # Setup
