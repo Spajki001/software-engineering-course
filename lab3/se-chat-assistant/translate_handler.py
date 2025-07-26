@@ -27,7 +27,7 @@ class TranslateHandler(QueryHandlerBase):
 			}
 		headers = {
 			"content-type": "application/x-www-form-urlencoded",
-			"X-RapidAPI-Key": "041d4bffadmsh54d6ef9d2437b3ep18bd10jsnc77e8bae94c7",
+			"X-RapidAPI-Key": "YOUR-API-KEY-HERE",
 			"X-RapidAPI-Host": "text-translator2.p.rapidapi.com"
 		}
 
