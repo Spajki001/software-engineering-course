@@ -31,7 +31,7 @@ class LoveHandler(QueryHandlerBase):
         querystring = {"fname":fname,"sname":sname}
 
         headers = {
-                "X-RapidAPI-Key": "0a79803ed3mshc384cde749c0e05p119b5ajsnc9242f1839cf",
+                "X-RapidAPI-Key": "YOUR-API-KEY-HERE",
                 "X-RapidAPI-Host": "love-calculator.p.rapidapi.com"
         }
 
